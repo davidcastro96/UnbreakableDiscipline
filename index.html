@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disciplina Inquebrantable | David Castro</title>
+    <title>Unbreakable Discipline | David Castro</title>
     <style>
         :root {
             --primary-color: #0a192f; /* Deep Navy */
@@ -39,31 +39,30 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 2rem;
+            gap: 3rem;
             margin-top: -6rem;
             background: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         .hero-image {
             flex: 1;
             min-width: 300px;
-            background-color: var(--bg-gray);
-            height: 450px;
+            height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 4px;
-            border: 2px dashed var(--accent-color);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .hero-image p {
-            color: var(--accent-color);
-            font-weight: bold;
-            text-align: center;
-            padding: 1rem;
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .hero-content {
@@ -72,35 +71,38 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 0.5rem;
             color: var(--primary-color);
+            line-height: 1.1;
         }
 
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--accent-color);
             font-weight: bold;
             margin-bottom: 1.5rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .description {
             margin-bottom: 2rem;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            color: #4b5563;
         }
 
         .btn-buy {
             display: inline-block;
             background-color: var(--accent-color);
             color: white;
-            padding: 1.2rem 2.5rem;
+            padding: 1.3rem 2.5rem;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             border-radius: 50px;
-            transition: transform 0.2s, background-color 0.2s;
-            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
             text-align: center;
             width: 100%;
             box-sizing: border-box;
@@ -108,55 +110,55 @@
 
         .btn-buy:hover {
             background-color: #b08d4a;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.5);
         }
 
         .details {
-            margin-top: 4rem;
+            margin-top: 5rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
         }
 
         .detail-item {
-            padding: 1.5rem;
-            border-bottom: 3px solid var(--accent-color);
+            padding: 2rem;
             background: var(--bg-gray);
+            border-top: 4px solid var(--accent-color);
+            border-radius: 0 0 8px 8px;
+            transition: transform 0.3s;
+        }
+
+        .detail-item:hover {
+            transform: translateY(-5px);
         }
 
         .detail-item h3 {
             margin-top: 0;
             color: var(--primary-color);
+            font-size: 1.4rem;
         }
 
         .footer {
             text-align: center;
-            padding: 3rem;
-            background: var(--bg-gray);
-            margin-top: 4rem;
-        }
-
-        .lang-switch {
-            text-align: right;
-            margin-bottom: 1rem;
-        }
-
-        .lang-switch a {
-            text-decoration: none;
+            padding: 4rem 2rem;
+            background: var(--primary-color);
             color: var(--text-light);
-            margin-left: 10px;
-            font-size: 0.9rem;
-            opacity: 0.8;
+            margin-top: 5rem;
         }
 
-        .lang-switch a:hover {
-            opacity: 1;
-            text-decoration: underline;
+        .author-tag {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: block;
         }
 
         @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .hero { margin-top: -2rem; }
+            h1 { font-size: 2.1rem; }
+            .hero { margin-top: -2rem; padding: 1.5rem; }
+            header { padding: 3rem 1rem; }
         }
     </style>
 </head>
@@ -164,61 +166,53 @@
 
     <header>
         <div class="container">
-            <div class="lang-switch">
-                <a href="#en">English</a> | <a href="#es">Español</a>
-            </div>
-            <p style="margin-bottom: 0; opacity: 0.9;">David Castro Presenta:</p>
-            <h2 style="margin-top: 0.5rem; font-size: 2rem;">Unbreakable Discipline</h2>
+            <span class="author-tag">David Castro Presents:</span>
+            <h2 style="margin-top: 0.5rem; font-size: 2.2rem; font-weight: 300; letter-spacing: 2px;">THE AUTHORITY BLUEPRINT</h2>
         </div>
     </header>
 
-    <div class="container" id="es">
+    <div class="container">
         <div class="hero">
             <div class="hero-image">
-                <img src="portada600600.png" alt="Portada Disciplina Inquebrantable" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+                <img src="portada600600.png" alt="Unbreakable Discipline Book Cover">
             </div>
             <div class="hero-content">
-                <h1>Disciplina Inquebrantable</h1>
-                <p class="subtitle">El Manual de la Mano Dura</p>
+                <h1>Unbreakable Discipline</h1>
+                <p class="subtitle">The Firm Hand Manual</p>
                 <p class="description">
-                    ¿Sientes que has perdido el control de tu hogar? Deja de negociar con berrinches y recupera tu rol como líder. Este eBook bilingüe te da las herramientas reales para formar hijos respetuosos y seguros.
+                    Are you tired of failed negotiations and household chaos? Stop being just a "playmate" and reclaim your role as a leader. This guide provides the raw, practical tools to raise respectful, secure, and resilient children.
                 </p>
-                <a href="https://go.hotmart.com/V105759320B?dp=1" class="btn-buy">¡COMPRAR AHORA!</a>
-                <p style="text-align: center; font-size: 0.8rem; margin-top: 1rem; color: #666;">
-                    Versión Bilingüe (Español/Inglés) • Acceso Inmediato
+                <a href="https://pay.hotmart.com/V105759320B" class="btn-buy">GET THE EBOOK NOW</a>
+                <p style="text-align: center; font-size: 0.85rem; margin-top: 1.2rem; color: #6b7280;">
+                    Instant Digital Access • Secure Checkout by Hotmart
                 </p>
             </div>
         </div>
 
         <div class="details">
             <div class="detail-item">
-                <h3>Contenido Real</h3>
-                <p>Sin rodeos ni teorías blandas. Casos reales y soluciones directas para el día a día.</p>
+                <h3>Real Authority</h3>
+                <p>No soft theories or empty words. Get real-world scenarios and direct solutions to reclaim control of your home today.</p>
             </div>
             <div class="detail-item">
-                <h3>Respeto y Amor</h3>
-                <p>Aprende por qué la firmeza es el mayor acto de amor que puedes darle a tus hijos.</p>
+                <h3>Love Through Limits</h3>
+                <p>Understand why firm boundaries are the greatest act of love you can give, reducing anxiety and providing security for your children.</p>
             </div>
             <div class="detail-item">
-                <h3>Bilingüe</h3>
-                <p>Contenido completo tanto en Inglés como en Español en un solo paquete.</p>
+                <h3>Resilient Future</h3>
+                <p>Prepare your kids for the real world. Learn how to say "No" and stick to it to build character that lasts a lifetime.</p>
             </div>
-        </div>
-    </div>
-
-    <div class="container" id="en" style="border-top: 1px solid #ddd; margin-top: 4rem; padding-top: 4rem;">
-        <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h1>Unbreakable Discipline</h1>
-            <p class="subtitle">The Firm Hand Manual</p>
-            <p class="description">
-                Stop negotiating with toddlers and start leading with authority. Reclaim your home and build resilient children with this straightforward, no-nonsense guide.
-            </p>
-            <a href="https://pay.hotmart.com/V105759320B" class="btn-buy">BUY NOW!</a>
         </div>
     </div>
 
     <div class="footer">
-        <p><strong>David Castro</strong><br>Escrito por David Castro. Todos los derechos reservados.</p>
+        <div class="container">
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>David Castro</strong></p>
+            <p style="opacity: 0.7; font-size: 0.9rem;">
+                © 2024 David Castro. All rights reserved.<br>
+                Empowering parents through traditional authority and firm discipline.
+            </p>
+        </div>
     </div>
 
 </body>
